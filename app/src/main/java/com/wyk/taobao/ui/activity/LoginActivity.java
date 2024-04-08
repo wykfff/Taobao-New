@@ -1,4 +1,4 @@
-package com.wyk.taobao.ui;
+package com.wyk.taobao.ui.activity;
 
 import static android.content.ContentValues.TAG;
 import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
@@ -49,6 +49,7 @@ public class LoginActivity extends AppCompatActivity {
         initEvent();
         eLoadingDialog = new ProgressDialog(this);
         eLoadingDialog.setMessage("加载中...");
+        T.init(LoginActivity.this);
     }
 
     private void stopLoadingProgress() {
@@ -86,6 +87,7 @@ public class LoginActivity extends AppCompatActivity {
                 String passWord = password.getText().toString();
                 if(TextUtils.isEmpty(userName) || TextUtils.isEmpty(passWord)){
                     T.showToast("密码或账号不能为空哦~");
+
                     return;
                 }
                 startLoadingProgress();
@@ -126,13 +128,13 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void toUserFoundActivity() {
-//        Intent intent = new Intent(this,PasswordFoundActivity.class);
-//        startActivity(intent);
+        Intent intent = new Intent(this,PasswordFoundActivity.class);
+        startActivity(intent);
     }
 
     private void toRegisterActivity() {
-//        Intent intent = new Intent(this,RegisterActivity.class);
-//        startActivity(intent);
+        Intent intent = new Intent(this,RegisterActivity.class);
+        startActivity(intent);
     }
 
     private void initView() {
