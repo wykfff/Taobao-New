@@ -3,6 +3,7 @@ package com.wyk.taobao.ui.activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -29,6 +30,7 @@ import java.io.File;
  * 注册控制类
  */
 public class RegisterActivity extends AppCompatActivity {
+    private static final String TAG = "RegisterActivity";
 
     ImageView icon;
     EditText username;
@@ -138,7 +140,7 @@ public class RegisterActivity extends AppCompatActivity {
                 .withRequestCode(1001)
                 .withMutilyMode(false)
                 .withTitle("上传个人头像")//标题文字
-                .withStartPath("/storage/emulated/0/Download")//指定初始显示路径
+                .withStartPath("/storage/emulated/0/DCIM")//指定初始显示路径
                 .withFileFilter(new String[]{".jpg", ".png",".jpeg"})//支持的上传的文件类型
                 .start();
     }
@@ -162,6 +164,7 @@ public class RegisterActivity extends AppCompatActivity {
                         @Override
                         public void onSuccess(String response) {
                             stopLoadingProgress();
+                            Log.d(TAG, "onSuccess:response: "+response);
                             user.setIcon(response);
                             Picasso.get()
                                     .load(Config.rsUrl + response)

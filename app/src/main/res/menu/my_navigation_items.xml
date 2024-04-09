@@ -17,5 +17,9 @@
         android:title="@string/text_search"
         android:icon="@mipmap/search_normal" />
 
+    <item android:id="@+id/me"
+        android:title="@string/me"
+        android:icon="@mipmap/me_normal" />
+
 
 </menu>

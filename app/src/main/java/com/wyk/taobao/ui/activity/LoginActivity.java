@@ -103,7 +103,7 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(User response) {
                         stopLoadingProgress();
-                        T.showToast("登录成功~" + response.isManager());
+                        T.showToast("登录成功~");
 //                        UserInfoHolder.getInstance().setUser(response);
                         toBasicInfoActivity();
                     }

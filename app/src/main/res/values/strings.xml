@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">淘宝领卷联盟</string>
+    <string name="app_name">淘宝领券联盟</string>
     <string name="text_home">首页</string>
     <string name="text_selected">精选</string>
     <string name="text_red_packet">特惠</string>
@@ -13,4 +13,5 @@
     <string name="text_loading_tips">玩命加载中..</string>
     <string name="text_on_sell_title">特惠宝贝</string>
     <string name="text_search_history">搜索历史</string>
+    <string name="me">我的</string>
 </resources>

@@ -22,8 +22,8 @@ public class MainApplication extends Application {
                 )
         );
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
-                .connectTimeout(10000L, TimeUnit.MILLISECONDS)
-                .readTimeout(10000L,TimeUnit.MILLISECONDS)
+                .connectTimeout(50000L, TimeUnit.MILLISECONDS)
+                .readTimeout(50000L,TimeUnit.MILLISECONDS)
                 .cookieJar(cookieJar)
                 .build();
         OkHttpUtils.initClient(okHttpClient);
